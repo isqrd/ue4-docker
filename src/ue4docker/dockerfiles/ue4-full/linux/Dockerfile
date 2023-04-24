@@ -53,6 +53,6 @@ RUN ue4 conan generate --profile-only
 
 # Enable PulseAudio support
 USER root
-RUN apt-get install -y --no-install-recommends pulseaudio-utils
+RUN apt-get install -y --no-install-recommends pulseaudio-utils cifs-utils iputils-ping
 COPY pulseaudio-client.conf /etc/pulse/client.conf
 USER ue4
